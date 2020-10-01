@@ -1,0 +1,296 @@
+
+
+*, *:before, *:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Merriweather', sans-serif;
+}
+
+header{
+    background: black;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    margin-bottom: 1em;
+}
+
+header h1{
+    font-size: 1.125em;
+    margin: 0;
+    padding: 1.3em;
+    text-transform: uppercase;
+}
+
+.banner {
+    width: 90%;
+    text-align: center;
+    padding: 1em 1em 2em 1em;
+    margin: auto;
+    border-bottom: solid 0.2375em black;
+}
+
+.banner h1{
+    margin: 0 0 .5em 0;
+    font-size: 1.09em;
+}
+
+.banner span{
+    color: #a8a8a8;
+    font-size: .8em;
+}
+
+form{
+    width: 90%;
+    margin: auto;
+    padding-top: .175em;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea,
+select{
+    background: #f2f2f5;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    height: auto;
+    padding: 15px;
+    width: 100%;
+    outline: none;
+}
+
+input:focus {
+    outline: 0;
+    border: 0.15625em solid #707c8d;
+}
+
+input[id='zipcode']{
+    display: block;
+    width: 50%;
+    margin-bottom: 1em;
+    margin-top: .475em;
+}
+
+input[type="radio"]{
+    border-radius: 5px;
+}
+
+::placeholder
+{
+    font-size: .75em;
+    font-style: italic;
+    text-align: right;
+    opacity: .5;
+}
+::-moz-placeholder{
+    font-size: .75em;
+    font-style: italic;
+    text-align: right;
+    opacity: .5;
+}
+::-webkit-input-placeholder{
+    font-size: .75em;
+    font-style: italic;
+    text-align: right;
+    padding-right: .2em;
+    opacity: .5;
+}
+
+:-ms-input-placeholder{
+    font-size: .75em;
+    font-style: italic;
+    text-align: right;
+    opacity: .5;
+}
+
+label{
+    color: #2F4F4F;
+    font-size: .9em;
+    display: block;
+    margin: .8em auto;
+}
+
+label.light{
+    padding-left: .5em;
+    display: inline;
+}
+
+fieldset{
+    padding: 0.35em 0 0.75em 0;
+    border-style: none;
+}
+
+legend{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.contact-fieldset{
+    padding-top: 1.2em;
+}
+
+.contact-fieldset legend{
+    font-size: 1.1875em;
+    margin: .5em 0 0 0;
+}
+
+.contact-fieldset label{
+    margin-top: 1.5em;
+}
+
+
+.contact-fieldset,
+.newsletter-fieldset{
+    border-top: solid 0.14375em black;
+}
+
+.newsletter-fieldset legend{
+    padding-top: 1.2em;
+}
+
+.newsletter-fieldset label{
+    font-size: .85em;
+    line-height: 2.2;
+}
+
+button{
+    padding: 18px 30px 18px 30px;
+    color: #fff;
+    background-color: #42cfd4;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: .8em auto;
+    width: 100%;
+    border: 1px solid #42cfd4;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+}
+
+footer{
+    color: rgba(188, 193, 194, 1);
+    font-style: italic;
+    font-size: .7em;
+    text-align: center;
+    margin-bottom: 25em;
+}
+
+.select-div select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-div{
+    position: relative;
+}
+
+.select-div:after{
+    font-size: 14px;
+    content: "\25c0\25b6";
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 3em;
+    right: 1em;
+    display: block;
+    pointer-events: none;
+}
+
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #ccc;
+}
+
+
+/*Added for browser compatibility*/
+[hidden] {
+    display: none;
+}
+
+
+/*===================================
+    Media Queries
+===================================== */
+
+@media (min-width: 768px) {
+
+
+    form,
+    .banner {
+        max-width: 600px;
+    }
+
+    .contact-fieldset {
+        padding-top: 2em;
+    }
+
+    .contact-fieldset legend {
+        margin-bottom: .5em;
+    }
+
+    .form-wrapper {
+        width: 70%;
+        margin: auto;
+    }
+
+    .banner {
+        width: 63%;
+    }
+
+    .select-div:after{
+        top: 1.5em;
+    }
+    .input-flex {
+        margin-top: .5em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input-item {
+        flex-basis: 75%;
+        margin: auto;
+        align-self: flex-end;
+    }
+
+    .label-item {
+        flex-basis: 25%;
+        margin-bottom: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    .zip-label{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .zip-flex{
+        display: flex;
+    }
+
+    .zip-flex .input-item{
+        flex-basis: 55%;
+    }
+
+    .zip-repair{
+        justify-content: left;
+    }
+
+    input#zipcode.input-item{
+        margin-left: 1em;
+    }
+
+}
+
